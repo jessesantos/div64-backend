@@ -6,7 +6,6 @@
 		echo $this->Form->input('id');
 		echo $this->Form->input('slug');
 		echo $this->Form->input('titulo');
-		echo $this->Form->input('produtos');
 	?>
 	</fieldset>
 <?php echo $this->Form->end(__('Salvar')); ?>
@@ -17,5 +16,7 @@
 
 		<li><?php echo $this->Form->postLink(__('Deletar'), array('action' => 'delete', $this->Form->value('Categoria.id')), array(), __('Are you sure you want to delete # %s?', $this->Form->value('Categoria.id'))); ?></li>
 		<li><?php echo $this->Html->link(__('Listar Categorias'), array('action' => 'index')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Produtos'), array('controller' => 'produtos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Produto'), array('controller' => 'produtos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>

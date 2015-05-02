@@ -5,7 +5,6 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('titulo'); ?></th>
-			<th><?php echo $this->Paginator->sort('produtos'); ?></th>
 			<th class="actions"><?php echo __('Ações'); ?></th>
 	</tr>
 	</thead>
@@ -14,7 +13,6 @@
 	<tr>
 		<td><?php echo h($categoria['Categoria']['id']); ?>&nbsp;</td>
 		<td><?php echo h($categoria['Categoria']['titulo']); ?>&nbsp;</td>
-		<td><?php echo h($categoria['Categoria']['produtos']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('Visualizar'), array('action' => 'view', $categoria['Categoria']['id'])); ?>
 			<?php echo $this->Html->link(__('Editar'), array('action' => 'edit', $categoria['Categoria']['id'])); ?>
@@ -42,5 +40,7 @@
 	<h3><?php echo __('Ações'); ?></h3>
 	<ul>
 		<li><?php echo $this->Html->link(__('Nova Categoria'), array('action' => 'add')); ?></li>
+		<li><?php echo $this->Html->link(__('Listar Produtos'), array('controller' => 'produtos', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('Novo Produto'), array('controller' => 'produtos', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
