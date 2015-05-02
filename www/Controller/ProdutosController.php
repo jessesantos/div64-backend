@@ -16,7 +16,8 @@ class ProdutosController extends AppController
      * @var array
      */
     public $components = array(
-        'Paginator'
+        'Paginator',
+        'RequestHandler'
     );
 
     /**
@@ -28,6 +29,7 @@ class ProdutosController extends AppController
     {
         $this->Produto->recursive = 0;
         $this->set('produtos', $this->Paginator->paginate());
+        $this->set('_serialize', array('produtos'));
     }
 
     /**
@@ -48,6 +50,7 @@ class ProdutosController extends AppController
             )
         );
         $this->set('produto', $this->Produto->find('first', $options));
+        $this->set('_serialize', array('produto'));
     }
 
     /**

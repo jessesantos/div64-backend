@@ -16,7 +16,8 @@ class CategoriasController extends AppController
      * @var array
      */
     public $components = array(
-        'Paginator'
+        'Paginator',
+        'RequestHandler'
     );
 
     /**
@@ -28,6 +29,7 @@ class CategoriasController extends AppController
     {
         $this->Categoria->recursive = 0;
         $this->set('categorias', $this->Paginator->paginate());
+        $this->set('_serialize', array('categorias'));
     }
 
     /**
@@ -48,6 +50,7 @@ class CategoriasController extends AppController
             )
         );
         $this->set('categoria', $this->Categoria->find('first', $options));
+        $this->set('_serialize', array('categoria'));
     }
 
     /**
