@@ -46,9 +46,9 @@
 			<td><?php echo 'R$' . str_replace('.', ',', $produto['preco']); ?></td>
 			<td><?php echo '<img width="150" src="' . $produto['thumbnail'] . '">'; ?></td>
 			<td class="actions">
-				<?php echo $this->Html->link(__('View'), array('controller' => 'produtos', 'action' => 'view', $produto['id'])); ?>
-				<?php echo $this->Html->link(__('Edit'), array('controller' => 'produtos', 'action' => 'edit', $produto['id'])); ?>
-				<?php echo $this->Form->postLink(__('Delete'), array('controller' => 'produtos', 'action' => 'delete', $produto['id']), array(), __('Are you sure you want to delete # %s?', $produto['id'])); ?>
+				<?php echo $this->Html->link(__('Visualizar'), array('controller' => 'produtos', 'action' => 'view', $produto['id'])); ?>
+				<?php echo $this->Html->link(__('Editar'), array('controller' => 'produtos', 'action' => 'edit', $produto['id'])); ?>
+				<?php echo $this->Form->postLink(__('Deletar'), array('controller' => 'produtos', 'action' => 'delete', $produto['id']), array(), __('Are you sure you want to delete # %s?', $produto['id'])); ?>
 			</td>
 		</tr>
 	<?php endforeach; ?>
